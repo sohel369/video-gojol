@@ -23,12 +23,40 @@ body {
 }
 
 nav {
-    width: 20%;
-    min-width: 20%;
+    min-width: 190px;
     height: 95vh;
     background: darkred;
     border-bottom-left-radius: 10px;
     position: relative;
+}
+
+#toggle_btn {
+    display: none;
+    position: absolute;
+    padding: 6px;
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    #toggle_btn {
+        display: inline-block;
+    }
+    #toggle_btn.active_btn {
+        left: 210px;
+    }
+    nav {
+        display: none;
+    }
+    nav.active_nav {
+        display: block;
+    }
 }
 
 .header nav ul li a.home {

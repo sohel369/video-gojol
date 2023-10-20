@@ -10,6 +10,9 @@
 
 <body>
     <header class="header">
+        <button id="toggle_btn">
+            Menu
+        </button>
         <nav>
             <ul>
                 <li><a href="#" class="home">Home</a></li>
@@ -28,6 +31,16 @@
 
     </header>
 
+
+    <script>
+        let toggle_btn = document.querySelector('#toggle_btn');
+        let nav = document.querySelector('nav');
+
+        toggle_btn.addEventListener('click', function() {
+            nav.classList.toggle('active_nav');
+            toggle_btn.classList.toggle('active_btn')
+        })
+    </script>
 </body>
 
 </html>
