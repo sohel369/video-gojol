@@ -44,27 +44,14 @@ nav {
     border-radius: 5px;
 }
 
-@media (max-width: 600px) {
-    #toggle_btn {
-        display: inline-block;
-    }
-    #toggle_btn.active_btn {
-        left: 210px;
-    }
-    nav {
-        display: none;
-    }
-    nav.active_nav {
-        display: block;
-    }
-}
-
 .header nav ul li a.home {
     color: #afa2a2;
 }
 
 .header nav ul li {
     display: block;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .header nav ul li a {
@@ -72,12 +59,12 @@ nav {
     color: #fff;
     font-size: 28px;
     margin-left: 20px;
-    padding-top: 20px;
+    position: relative;
 }
 
 .header nav ul {
     position: relative;
-    top: 30%;
+    top: 30px;
 }
 
 .imgtext {
@@ -102,3 +89,48 @@ nav {
     width: 100%;
     object-fit: cover;
 }
+
+
+/*  .........underline on anchor........ */
+
+.header nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    transition: 1s;
+    opacity: 0;
+    background: rgb(160, 161, 223);
+    height: 4px;
+    border-radius: 5px;
+}
+
+.header nav ul li a:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+
+/* ........underline on anchor tag end......... */
+
+
+/* ....responsive...... */
+
+@media (max-width: 600px) {
+    #toggle_btn {
+        display: inline-block;
+    }
+    #toggle_btn.active_btn {
+        left: 210px;
+    }
+    nav {
+        display: none;
+    }
+    nav.active_nav {
+        display: block;
+    }
+}
+
+
+/* .....responsive end..... */
